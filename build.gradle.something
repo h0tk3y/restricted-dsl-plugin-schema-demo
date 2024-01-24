@@ -1,0 +1,26 @@
+plugins {
+    id("com.example.restricted")
+}
+
+restricted {
+    id = "test"
+    
+    referencePoint = point(1, 2)
+    
+    primaryAccess {
+        read = false
+        write = false
+    }
+    
+    secondaryAccess {
+        name = "two"
+        read = true
+        write = false
+    }
+
+    secondaryAccess {
+        name = "three"
+        read = true
+        write = true
+    }   
+}
