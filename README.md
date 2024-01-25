@@ -3,7 +3,8 @@
 This repository demonstrates contributing to a restricted DSL schema from third-party Gradle plugins. See:
 
 * [`buildSrc/src/main/java/.../Extension.java`](buildSrc/src/main/java/com/example/restricted/Extension.java) 
-  for the annotated project extension, and
+  for the annotated project extension;
+  * Currently, the extension is registered with regular Gradle [plugin code](https://github.com/h0tk3y/restricted-dsl-plugin-schema-demo/blob/master/buildSrc/src/main/java/com/example/restricted/RestrictedPlugin.java#L13). The registration routine is subject to future changes.
 * [`build.gradle.something`](build.gradle.something) showing the usage of the plugin in the restricted DSL.
 
 ## How it works
