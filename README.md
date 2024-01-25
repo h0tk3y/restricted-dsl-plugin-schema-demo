@@ -42,6 +42,7 @@ Supported members in restricted types:
 
   * `@Configuring`, if the function configures an existing object.
   * `@Adding`, if the function creates and configures a new object each time when it is invoked.
+    * Currently, an `@Adding` function must return the object that it creates. This restriction may be lifted.
   
   Currently, they must also provide an implementation to work at runtime, and the contract is not checked.
   For the restricted DSL runtime to correctly apply the data to the JVM objects, the implementation must invoke

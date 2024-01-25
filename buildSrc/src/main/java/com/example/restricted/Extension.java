@@ -56,6 +56,7 @@ public abstract class Extension {
     }
 
     // Contrary to @Configuring, an @Adding create a new element in this container each time it is invoked.
+    // An @Adding function must return the object it creates.
     @Adding
     public Access secondaryAccess(Action<? super Access> configure) {
         Access newAccess = objects.newInstance(Access.class);
